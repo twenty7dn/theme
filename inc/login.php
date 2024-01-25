@@ -480,15 +480,8 @@ add_action( 'login_header', function() {
                     <a href="<?php echo HEADLESS_FRONTEND_URL; ?>">
                         <?php echo $imgix->get_image( get_field( 'icon', 'options' ), array('' => array('w' => 96, 'h' => 96) ) ); ?>
                     </a>
-					<h2>Welcome to my blog!</h2>
-					<p>Howdy, the name&apos;s David M. Coleman.
-					</p>
-					<p>
-						This is my personal blog wherein a discuss the various subjects that interest me.
-					</p>
-					<p>
-						Follow me on this grand adventure!
-					</p>
+					<h2><?php echo get_field( 'login_headline', 'options' ); ?></h2>
+					<?php echo get_field( 'login_description', 'options' ); ?>
 				</div>
 				<?php if ( ! empty( get_field( 'image_credit', get_field( 'background', 'options' ) ) ) ) { ?>
 					<div class="image-credit">
